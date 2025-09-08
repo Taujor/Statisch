@@ -5,97 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statisch | Services</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import '@material/web/all.js';
+      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- MDL Layout -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">Statisch</span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation. We hide it in small screens. -->
-                <nav class="mdl-navigation mdl-layout--large-screen-only">
-                    <a class="mdl-navigation__link" href="services.html">Services</a>
-                    <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
-                    <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
-                    <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
-                    <a class="mdl-navigation__link" href="process.html">Process</a>
-                    <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
-                </nav>
-            </div>
-        </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Statisch</span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="index.html">Home</a>
-                <a class="mdl-navigation__link" href="services.html">Services</a>
-                <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
-                <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
-                <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
-                <a class="mdl-navigation__link" href="process.html">Process</a>
-                <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
-            </nav>
+    <md-top-app-bar>
+        <div slot="headline">Statisch</div>
+        <md-icon-button slot="navigationIcon" id="navigation-icon">
+            <md-icon>menu</md-icon>
+        </md-icon-button>
+        <div slot="actionItems">
+            <md-text-button href="services.html">Services</md-text-button>
+            <md-text-button href="why-us.html">Why Us</md-text-button>
+            <md-text-button href="pricing.html">Pricing</md-text-button>
+            <md-filled-button href="contact.html">Get In Touch</md-filled-button>
         </div>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-                <section id="services">
-                    <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
-                            <h2>Our Core Services</h2>
-                            <p>We provide everything you need for a successful web presence.</p>
-                        </div>
-                    </div>
-                    <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
-                                <div class="mdl-card__title">
-                                    <h2 class="mdl-card__title-text">Bespoke Web Design</h2>
-                                </div>
-                                <div class="mdl-card__supporting-text">
-                                    A unique, modern design tailored specifically to your brand and business goals.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
-                                <div class="mdl-card__title">
-                                    <h2 class="mdl-card__title-text">Development</h2>
-                                </div>
-                                <div class="mdl-card__supporting-text">
-                                    Clean, efficient, and responsive code that ensures your site is fast and reliable on all devices.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
-                                <div class="mdl-card__title">
-                                    <h2 class="mdl-card__title-text">Hosting</h2>
-                                </div>
-                                <div class="mdl-card__supporting-text">
-                                    Secure and dependable hosting, so you never have to worry about uptime or performance.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mdl-cell mdl-cell--6-col">
-                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
-                                <div class="mdl-card__title">
-                                    <h2 class="mdl-card__title-text">Hands-Free Maintenance</h2>
-                                </div>
-                                <div class="mdl-card__supporting-text">
-                                    Need a change? Just send us an email. We handle all content updates and edits for you.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-    </div>
-    <script src="main.js"></script>
+    </md-top-app-bar>
+
+    <md-drawer id="drawer">
+        <md-list>
+          <md-list-item href="index.html" headline="Home">
+            <md-icon slot="start">home</md-icon>
+          </md-list-item>
+          <md-list-item href="services.html" headline="Services" active>
+            <md-icon slot="start">build</md-icon>
+          </md-list-item>
+           <md-list-item href="why-us.html" headline="Why Us">
+            <md-icon slot="start">question_answer</md-icon>
+          </md-list-item>
+          <md-list-item href="pricing.html" headline="Pricing">
+            <md-icon slot="start">attach_money</md-icon>
+          </md-list-item>
+           <md-list-item href="testimonials.html" headline="Testimonials">
+            <md-icon slot="start">record_voice_over</md-icon>
+          </md-list-item>
+           <md-list-item href="process.html" headline="Process">
+            <md-icon slot="start">timeline</md-icon>
+          </md-list-item>
+           <md-list-item href="contact.html" headline="Contact">
+            <md-icon slot="start">email</md-icon>
+          </md-list-item>
+        </md-list>
+    </md-drawer>
+
+    <main class="main-content">
+      <h1 class="md-typescale-display-medium">Our Services</h1>
+      <div class="card-grid">
+        <md-filled-card>
+            <h2>Bespoke Web Design</h2>
+            <p>A unique, modern design tailored specifically to your brand and business goals.</p>
+        </md-filled-card>
+        <md-filled-card>
+            <h2>Development</h2>
+            <p>Clean, efficient, and responsive code that ensures your site is fast and reliable on all devices.</p>
+        </md-filled-card>
+        <md-filled-card>
+            <h2>Hosting</h2>
+            <p>Secure and dependable hosting, so you never have to worry about uptime or performance.</p>
+        </md-filled-card>
+        <md-filled-card>
+            <h2>Hands-Free Maintenance</h2>
+            <p>Need a change? Just send us an email. We handle all content updates and edits for you.</p>
+        </md-filled-card>
+      </div>
+    </main>
+
+  <script type="module">
+    const navButton = document.getElementById('navigation-icon');
+    const drawer = document.getElementById('drawer');
+    navButton.addEventListener('click', () => {
+        drawer.open = !drawer.open;
+    });
+  </script>
 </body>
 </html>

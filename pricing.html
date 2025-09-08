@@ -5,144 +5,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statisch | Pricing</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script type="importmap">
-      {
-        "imports": {
-          "@material/web/": "https://esm.run/@material/web/"
-        }
-      }
-    </script>
-    <script type="module">
-      import '@material/web/all.js';
-      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
-      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
-    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/14.0.0/material-components-web.min.css">
     <link rel="stylesheet" href="main.css">
 </head>
-<body>
-    <md-top-app-bar>
-        <div slot="headline">Statisch</div>
-        <md-icon-button slot="navigationIcon" id="navigation-icon">
-            <md-icon>menu</md-icon>
-        </md-icon-button>
-        <div slot="actionItems">
-            <md-text-button href="services.html">Services</md-text-button>
-            <md-text-button href="why-us.html">Why Us</md-text-button>
-            <md-text-button href="pricing.html">Pricing</md-text-button>
-            <md-filled-button href="contact.html">Get In Touch</md-filled-button>
+<body class="mdc-typography">
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" aria-label="Open navigation menu">menu</button>
+        <span class="mdc-top-app-bar__title">Statisch</span>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+        <a href="services.html" class="mdc-button"><span class="mdc-button__label">Services</span></a>
+        <a href="why-us.html" class="mdc-button"><span class="mdc-button__label">Why Us</span></a>
+        <a href="pricing.html" class="mdc-button mdc-button--activated"><span class="mdc-button__label">Pricing</span></a>
+        <a href="contact.html" class="mdc-button mdc-button--raised">
+          <span class="mdc-button__ripple"></span>
+          <span class="mdc-button__label">Get In Touch</span>
+        </a>
+      </section>
+    </div>
+  </header>
+  <aside class="mdc-drawer mdc-drawer--modal">
+    <div class="mdc-drawer__content">
+      <nav class="mdc-list">
+        <a class="mdc-list-item" href="index.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+          <span class="mdc-list-item__text">Home</span>
+        </a>
+        <a class="mdc-list-item" href="services.html">
+          <i class="material-icons mdc-list-item__graphic" aria-hidden="true">build</i>
+          <span class="mdc-list-item__text">Services</span>
+        </a>
+        <a class="mdc-list-item" href="why-us.html">
+           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">question_answer</i>
+          <span class="mdc-list-item__text">Why Us</span>
+        </a>
+         <a class="mdc-list-item mdc-list-item--activated" href="pricing.html" aria-current="page">
+           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">attach_money</i>
+          <span class="mdc-list-item__text">Pricing</span>
+        </a>
+        <a class="mdc-list-item" href="testimonials.html">
+           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">record_voice_over</i>
+          <span class="mdc-list-item__text">Testimonials</span>
+        </a>
+        <a class="mdc-list-item" href="process.html">
+           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">timeline</i>
+          <span class="mdc-list-item__text">Process</span>
+        </a>
+        <a class="mdc-list-item" href="contact.html">
+           <i class="material-icons mdc-list-item__graphic" aria-hidden="true">email</i>
+          <span class="mdc-list-item__text">Contact</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+  <div class="mdc-drawer-app-content mdc-top-app-bar--fixed-adjust">
+    <main class="main-content" id="main-content">
+      <div class="mdc-layout-grid">
+        <div class="mdc-layout-grid__inner">
+          <div class="mdc-layout-grid__cell--span-12" style="text-align:center;">
+              <h1>Find a Plan That's Right For You</h1>
+              <p>Simple, transparent pricing for businesses of all sizes.</p>
+          </div>
+          <div class="mdc-layout-grid__cell--span-4">
+            <div class="mdc-card">
+              <div class="mdc-card__primary-action">
+                <div style="padding: 1rem;">
+                  <h2 class="mdc-typography--headline6">Basic</h2>
+                  <p class="price">$499/one-time</p>
+                  <ul class="mdc-list">
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Single Page Website</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Responsive Design</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Basic SEO Setup</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">1 Month Maintenance</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mdc-card__actions">
+                <button class="mdc-button mdc-card__action mdc-card__action--button" data-dialog-id="basicDialog">
+                  <span class="mdc-button__ripple"></span>
+                  <span class="mdc-button__label">Choose Basic</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mdc-layout-grid__cell--span-4">
+            <div class="mdc-card">
+              <div class="mdc-card__primary-action">
+                <div style="padding: 1rem;">
+                  <h2 class="mdc-typography--headline6">Pro</h2>
+                  <p class="price">$999/one-time</p>
+                  <ul class="mdc-list">
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Up to 5 Pages</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Custom Design & Features</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Advanced SEO</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">3 Months Maintenance</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Priority Support</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mdc-card__actions">
+                <button class="mdc-button mdc-card__action mdc-card__action--button" data-dialog-id="proDialog">
+                  <span class="mdc-button__ripple"></span>
+                  <span class="mdc-button__label">Choose Pro</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="mdc-layout-grid__cell--span-4">
+            <div class="mdc-card">
+              <div class="mdc-card__primary-action">
+                <div style="padding: 1rem;">
+                  <h2 class="mdc-typography--headline6">Enterprise</h2>
+                  <p class="price">Let's Talk</p>
+                  <ul class="mdc-list">
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Unlimited Pages</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Full-stack Applications</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Dedicated Support</span></li>
+                    <li class="mdc-list-item"><span class="mdc-list-item__text">Ongoing Partnership</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mdc-card__actions">
+                <button class="mdc-button mdc-card__action mdc-card__action--button" data-dialog-id="enterpriseDialog">
+                  <span class="mdc-button__ripple"></span>
+                  <span class="mdc-button__label">Contact Sales</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-    </md-top-app-bar>
-
-    <md-drawer id="drawer">
-        <md-list>
-          <md-list-item href="index.html" headline="Home">
-            <md-icon slot="start">home</md-icon>
-          </md-list-item>
-          <md-list-item href="services.html" headline="Services">
-            <md-icon slot="start">build</md-icon>
-          </md-list-item>
-           <md-list-item href="why-us.html" headline="Why Us">
-            <md-icon slot="start">question_answer</md-icon>
-          </md-list-item>
-          <md-list-item href="pricing.html" headline="Pricing" active>
-            <md-icon slot="start">attach_money</md-icon>
-          </md-list-item>
-           <md-list-item href="testimonials.html" headline="Testimonials">
-            <md-icon slot="start">record_voice_over</md-icon>
-          </md-list-item>
-           <md-list-item href="process.html" headline="Process">
-            <md-icon slot="start">timeline</md-icon>
-          </md-list-item>
-           <md-list-item href="contact.html" headline="Contact">
-            <md-icon slot="start">email</md-icon>
-          </md-list-item>
-        </md-list>
-    </md-drawer>
-
-    <main class="main-content">
-      <h1 class="md-typescale-display-medium">Find a Plan That's Right For You</h1>
-      <p class="md-typescale-body-large">Simple, transparent pricing for businesses of all sizes.</p>
-      <div class="card-grid">
-        <md-filled-card>
-            <h2>Basic</h2>
-            <p>$499/one-time</p>
-            <ul>
-                <li>Single Page Website</li>
-                <li>Responsive Design</li>
-                <li>Basic SEO Setup</li>
-                <li>1 Month Maintenance</li>
-            </ul>
-            <md-filled-button id="chooseBasic">Choose Basic</md-filled-button>
-        </md-filled-card>
-        <md-filled-card>
-            <h2>Pro</h2>
-            <p>$999/one-time</p>
-            <ul>
-                <li>Up to 5 Pages</li>
-                <li>Custom Design & Features</li>
-                <li>Advanced SEO</li>
-                <li>3 Months Maintenance</li>
-                <li>Priority Support</li>
-            </ul>
-            <md-filled-button id="choosePro">Choose Pro</md-filled-button>
-        </md-filled-card>
-        <md-filled-card>
-            <h2>Enterprise</h2>
-            <p>Let's Talk</p>
-            <ul>
-                <li>Unlimited Pages</li>
-                <li>Full-stack Applications</li>
-                <li>Dedicated Support</li>
-                <li>Ongoing Partnership</li>
-            </ul>
-            <md-filled-button id="contactSales">Contact Sales</md-filled-button>
-        </md-filled-card>
-      </div>
     </main>
-
-    <md-dialog id="basicDialog">
-      <div slot="headline">Basic Plan</div>
-      <form slot="content" id="basic-form" method="dialog">
-        To proceed with the Basic plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Basic Plan">sales@statisch.dev</a> with the subject line "Inquiry: Basic Plan".
-      </form>
-      <div slot="actions">
-        <md-text-button form="basic-form">Close</md-text-button>
+  </div>
+  <div class="mdc-dialog" id="basicDialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="basic-dialog-title"
+        aria-describedby="basic-dialog-content">
+        <h2 class="mdc-dialog__title" id="basic-dialog-title">Basic Plan</h2>
+        <div class="mdc-dialog__content" id="basic-dialog-content">
+          To proceed with the Basic plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Basic Plan">sales@statisch.dev</a> with the subject line "Inquiry: Basic Plan".
+        </div>
+        <div class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+            <span class="mdc-button__label">Close</span>
+          </button>
+        </div>
       </div>
-    </md-dialog>
-    <md-dialog id="proDialog">
-      <div slot="headline">Pro Plan</div>
-      <form slot="content" id="pro-form" method="dialog">
-        To proceed with the Pro plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Pro Plan">sales@statisch.dev</a> with the subject line "Inquiry: Pro Plan".
-      </form>
-      <div slot="actions">
-        <md-text-button form="pro-form">Close</md-text-button>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+  <div class="mdc-dialog" id="proDialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="pro-dialog-title"
+        aria-describedby="pro-dialog-content">
+        <h2 class="mdc-dialog__title" id="pro-dialog-title">Pro Plan</h2>
+        <div class="mdc-dialog__content" id="pro-dialog-content">
+          To proceed with the Pro plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Pro Plan">sales@statisch.dev</a> with the subject line "Inquiry: Pro Plan".
+        </div>
+        <div class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+            <span class="mdc-button__label">Close</span>
+          </button>
+        </div>
       </div>
-    </md-dialog>
-    <md-dialog id="enterpriseDialog">
-      <div slot="headline">Enterprise Plan</div>
-      <form slot="content" id="enterprise-form" method="dialog">
-       To discuss the Enterprise plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Enterprise Plan">sales@statisch.dev</a> with the subject line "Inquiry: Enterprise Plan".
-      </form>
-      <div slot="actions">
-        <md-text-button form="enterprise-form">Close</md-text-button>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+    <div class="mdc-dialog" id="enterpriseDialog">
+    <div class="mdc-dialog__container">
+      <div class="mdc-dialog__surface"
+        role="alertdialog"
+        aria-modal="true"
+        aria-labelledby="enterprise-dialog-title"
+        aria-describedby="enterprise-dialog-content">
+        <h2 class="mdc-dialog__title" id="enterprise-dialog-title">Enterprise Plan</h2>
+        <div class="mdc-dialog__content" id="enterprise-dialog-content">
+          To discuss the Enterprise plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Enterprise Plan">sales@statisch.dev</a> with the subject line "Inquiry: Enterprise Plan".
+        </div>
+        <div class="mdc-dialog__actions">
+          <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">
+            <span class="mdc-button__label">Close</span>
+          </button>
+        </div>
       </div>
-    </md-dialog>
-
-  <script type="module">
-    const navButton = document.getElementById('navigation-icon');
-    const drawer = document.getElementById('drawer');
-    navButton.addEventListener('click', () => {
-        drawer.open = !drawer.open;
-    });
-
-    const basicDialog = document.getElementById('basicDialog');
-    const proDialog = document.getElementById('proDialog');
-    const enterpriseDialog = document.getElementById('enterpriseDialog');
-
-    document.getElementById('chooseBasic').addEventListener('click', () => basicDialog.show());
-    document.getElementById('choosePro').addEventListener('click', () => proDialog.show());
-    document.getElementById('contactSales').addEventListener('click', () => enterpriseDialog.show());
-  </script>
+    </div>
+    <div class="mdc-dialog__scrim"></div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/material-components-web/14.0.0/material-components-web.min.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

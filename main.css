@@ -1,18 +1,6 @@
-/* Custom styles for Statisch Material 3 Theme */
+/* Custom styles for Statisch MDC Theme */
 
-:root {
-  --md-sys-color-primary: #10B981;
-  --md-sys-color-on-primary: #FFFFFF;
-  --md-sys-color-primary-container: #A1F2C4;
-  --md-sys-color-on-primary-container: #002111;
-}
-
-body {
-    background-color: var(--md-sys-color-background, #FEF7FF);
-    color: var(--md-sys-color-on-background, #1D1B20);
-}
-
-main {
+.main-content {
     padding: 24px;
 }
 
@@ -21,40 +9,26 @@ main {
     padding: 64px 24px;
 }
 
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 16px;
-    margin-top: 32px;
+.mdc-layout-grid {
+    padding: 0;
 }
 
-md-outlined-card, md-filled-card {
+.mdc-card {
     width: 100%;
+    margin-bottom: 16px;
 }
 
-md-outlined-card {
-    background-size: cover;
-    color: white;
-    padding: 16px;
-    text-shadow: 1px 1px 2px black;
-}
-
-.column-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    align-items: center;
-}
-
-.column-layout img {
-    width: 100%;
-    border-radius: 8px;
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 .author {
     display: flex;
     align-items: center;
     gap: 16px;
+    padding: 1rem;
 }
 
 .author img {

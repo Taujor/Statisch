@@ -5,56 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statisch | Contact</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+      {
+        "imports": {
+          "@material/web/": "https://esm.run/@material/web/"
+        }
+      }
+    </script>
+    <script type="module">
+      import '@material/web/all.js';
+      import {styles as typescaleStyles} from '@material/web/typography/md-typescale-styles.js';
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <!-- MDL Layout -->
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <!-- Title -->
-                <span class="mdl-layout-title">Statisch</span>
-                <!-- Add spacer, to align navigation to the right -->
-                <div class="mdl-layout-spacer"></div>
-                <!-- Navigation. We hide it in small screens. -->
-                <nav class="mdl-navigation mdl-layout--large-screen-only">
-                    <a class="mdl-navigation__link" href="services.html">Services</a>
-                    <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
-                    <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
-                    <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
-                    <a class="mdl-navigation__link" href="process.html">Process</a>
-                    <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
-                </nav>
-            </div>
-        </header>
-        <div class="mdl-layout__drawer">
-            <span class="mdl-layout-title">Statisch</span>
-            <nav class="mdl-navigation">
-                <a class="mdl-navigation__link" href="index.html">Home</a>
-                <a class="mdl-navigation__link" href="services.html">Services</a>
-                <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
-                <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
-                <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
-                <a class="mdl-navigation__link" href="process.html">Process</a>
-                <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
-            </nav>
+    <md-top-app-bar>
+        <div slot="headline">Statisch</div>
+        <md-icon-button slot="navigationIcon" id="navigation-icon">
+            <md-icon>menu</md-icon>
+        </md-icon-button>
+        <div slot="actionItems">
+            <md-text-button href="services.html">Services</md-text-button>
+            <md-text-button href="why-us.html">Why Us</md-text-button>
+            <md-text-button href="pricing.html">Pricing</md-text-button>
+            <md-filled-button href="contact.html">Get In Touch</md-filled-button>
         </div>
-        <main class="mdl-layout__content">
-            <div class="page-content">
-                <section id="contact">
-                    <div class="mdl-grid">
-                        <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
-                            <h2>Ready to Elevate Your Web Presence?</h2>
-                            <p>Let's build something great together. Get in touch to start your project.</p>
-                            <a href="mailto:hello@statisch.dev" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">hello@statisch.dev</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </main>
-    </div>
-    <script src="main.js"></script>
+    </md-top-app-bar>
+
+    <md-drawer id="drawer">
+        <md-list>
+          <md-list-item href="index.html" headline="Home">
+            <md-icon slot="start">home</md-icon>
+          </md-list-item>
+          <md-list-item href="services.html" headline="Services">
+            <md-icon slot="start">build</md-icon>
+          </md-list-item>
+           <md-list-item href="why-us.html" headline="Why Us">
+            <md-icon slot="start">question_answer</md-icon>
+          </md-list-item>
+          <md-list-item href="pricing.html" headline="Pricing">
+            <md-icon slot="start">attach_money</md-icon>
+          </md-list-item>
+           <md-list-item href="testimonials.html" headline="Testimonials">
+            <md-icon slot="start">record_voice_over</md-icon>
+          </md-list-item>
+           <md-list-item href="process.html" headline="Process">
+            <md-icon slot="start">timeline</md-icon>
+          </md-list-item>
+           <md-list-item href="contact.html" headline="Contact" active>
+            <md-icon slot="start">email</md-icon>
+          </md-list-item>
+        </md-list>
+    </md-drawer>
+
+    <main class="main-content">
+      <div style="text-align: center;">
+        <h1 class="md-typescale-display-medium">Ready to Elevate Your Web Presence?</h1>
+        <p class="md-typescale-body-large">Let's build something great together. Get in touch to start your project.</p>
+        <md-filled-button href="mailto:hello@statisch.dev">
+            hello@statisch.dev
+            <md-icon slot="icon">email</md-icon>
+        </md-filled-button>
+      </div>
+    </main>
+
+  <script type="module">
+    const navButton = document.getElementById('navigation-icon');
+    const drawer = document.getElementById('drawer');
+    navButton.addEventListener('click', () => {
+        drawer.open = !drawer.open;
+    });
+  </script>
 </body>
 </html>

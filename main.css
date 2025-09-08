@@ -1,79 +1,64 @@
-/* Custom styles for Statisch MDL Theme */
+/* Custom styles for Statisch Material 3 Theme */
 
-.page-content {
+:root {
+  --md-sys-color-primary: #10B981;
+  --md-sys-color-on-primary: #FFFFFF;
+  --md-sys-color-primary-container: #A1F2C4;
+  --md-sys-color-on-primary-container: #002111;
+}
+
+body {
+    background-color: var(--md-sys-color-background, #FEF7FF);
+    color: var(--md-sys-color-on-background, #1D1B20);
+}
+
+main {
     padding: 24px;
 }
 
-#hero h1 {
-    font-size: 3rem;
+#hero {
+    text-align: center;
+    padding: 64px 24px;
 }
 
-#hero p {
-    font-size: 1.25rem;
-    color: #757575; /* Material Design grey */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+    margin-top: 32px;
 }
 
-.logos img {
-    filter: grayscale(100%);
-    opacity: 0.6;
-    margin: 0 16px;
-}
-
-.mdl-card {
+md-outlined-card, md-filled-card {
     width: 100%;
-    margin-bottom: 16px;
 }
 
-.mdl-card__title-text {
-    font-size: 1.5rem;
+md-outlined-card {
+    background-size: cover;
+    color: white;
+    padding: 16px;
+    text-shadow: 1px 1px 2px black;
 }
 
-.price {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+.column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    align-items: center;
+}
+
+.column-layout img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 .author {
     display: flex;
     align-items: center;
+    gap: 16px;
 }
 
-/* Modal Styles */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1000; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 500px;
-    border-radius: 8px;
-    position: relative;
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }

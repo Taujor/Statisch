@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statisch | Pricing</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">Statisch</a>
+            <nav>
+                <ul>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="why-us.html">Why Us</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="process.html">Process</a></li>
+                </ul>
+            </nav>
+            <a href="contact.html" class="button button-primary">Get In Touch</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Find a Plan That's Right For You</h2>
+                    <p>Simple, transparent pricing for businesses of all sizes.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card">
+                        <h3>Basic</h3>
+                        <p class="price"><span>$499</span>/one-time</p>
+                        <ul class="feature-list">
+                            <li>Single Page Website</li>
+                            <li>Responsive Design</li>
+                            <li>Basic SEO Setup</li>
+                            <li>1 Month Maintenance</li>
+                        </ul>
+                        <a href="#" id="chooseBasic" class="button button-secondary">Choose Basic</a>
+                    </div>
+                    <div class="pricing-card highlighted">
+                        <span class="highlight-tag">Most Popular</span>
+                        <h3>Pro</h3>
+                        <p class="price"><span>$999</span>/one-time</p>
+                        <ul class="feature-list">
+                            <li>Up to 5 Pages</li>
+                            <li>Custom Design & Features</li>
+                            <li>Advanced SEO</li>
+                            <li>3 Months Maintenance</li>
+                            <li>Priority Support</li>
+                        </ul>
+                        <a href="#" id="choosePro" class="button button-primary">Choose Pro</a>
+                    </div>
+                    <div class="pricing-card">
+                        <h3>Enterprise</h3>
+                        <p class="price"><span>Let's Talk</span></p>
+                        <ul class="feature-list">
+                            <li>Unlimited Pages</li>
+                            <li>Full-stack Applications</li>
+                            <li>Dedicated Support</li>
+                            <li>Ongoing Partnership</li>
+                        </ul>
+                        <a href="#" id="contactSales" class="button button-secondary">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="logo">Statisch</a>
+                    <p>High-performance static websites.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Navigate</h3>
+                    <ul>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="why-us.html">Why Us</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
+                        <li><a href="process.html">Process</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="contact.html">Email Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Social</h3>
+                    <ul>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Statisch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <div id="basicModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Basic Plan</h2>
+            <p>To proceed with the Basic plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Basic Plan">sales@statisch.dev</a> with the subject line "Inquiry: Basic Plan".</p>
+        </div>
+    </div>
+
+    <div id="proModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Pro Plan</h2>
+            <p>To proceed with the Pro plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Pro Plan">sales@statisch.dev</a> with the subject line "Inquiry: Pro Plan".</p>
+        </div>
+    </div>
+
+    <div id="enterpriseModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Enterprise Plan</h2>
+            <p>To discuss the Enterprise plan, please send an email to <a href="mailto:sales@statisch.dev?subject=Inquiry: Enterprise Plan">sales@statisch.dev</a> with the subject line "Inquiry: Enterprise Plan".</p>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

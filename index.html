@@ -4,268 +4,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statisch | Modern Web Development</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Statisch</a>
-            <nav>
-                <ul>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="why-us.html">Why Us</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="process.html">Process</a></li>
-                </ul>
+    <!-- MDL Layout -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Statisch</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="services.html">Services</a>
+                    <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
+                    <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
+                    <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
+                    <a class="mdl-navigation__link" href="process.html">Process</a>
+                    <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Statisch</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="services.html">Services</a>
+                <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
+                <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
+                <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
+                <a class="mdl-navigation__link" href="process.html">Process</a>
+                <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
             </nav>
-            <a href="contact.html" class="button button-primary">Get In Touch</a>
         </div>
-    </header>
-
-    <main>
-        <section id="hero">
-            <div class="container">
-                <h1>Simple, Fast, Professional Websites.</h1>
-                <p class="subtitle">We build high-performance static websites for small and medium-sized businesses that are easy to maintain and a joy to use.</p>
-                <a href="contact.html" class="button button-primary">Start Your Project</a>
-            </div>
-        </section>
-
-        <section id="social-proof">
-            <div class="container">
-                <p class="trusted-by">TRUSTED BY TEAMS WORLDWIDE</p>
-                <div class="logos">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 1">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 2">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 3">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 4">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 5">
-                </div>
-            </div>
-        </section>
-
-        <section id="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Core Services</h2>
-                    <p>We provide everything you need for a successful web presence.</p>
-                </div>
-                <div class="service-grid">
-                    <div class="card">
-                        <h3>Bespoke Web Design</h3>
-                        <p>A unique, modern design tailored specifically to your brand and business goals.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Development</h3>
-                        <p>Clean, efficient, and responsive code that ensures your site is fast and reliable on all devices.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Hosting</h3>
-                        <p>Secure and dependable hosting, so you never have to worry about uptime or performance.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Hands-Free Maintenance</h3>
-                        <p>Need a change? Just send us an email. We handle all content updates and edits for you.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="why-us">
-            <div class="container feature-section">
-                <div class="feature-text">
-                    <h2>Why Choose Statisch?</h2>
-                    <p>We focus on one thing and do it perfectly: creating beautiful, high-performance static websites. By removing the complexity of a CMS, we provide a more secure, faster, and hassle-free experience for you and your customers.</p>
-                    <ul class="feature-list">
-                        <li>Faster load times to improve user experience.</li>
-                        <li>Enhanced security with no databases to hack.</li>
-                        <li>Simple, email-based updates for zero hassle.</li>
-                    </ul>
-                </div>
-                <div class="feature-image">
-                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1287&auto=format&fit=crop" alt="A modern office with people working on computers">
-                </div>
-            </div>
-        </section>
-
-        <section id="process">
-             <div class="container">
-                <div class="section-header">
-                    <h2>Our Simple 3-Step Process</h2>
-                </div>
-                <div class="process-steps">
-                     <div class="step">
-                        <h3>1. Consultation & Design</h3>
-                        <p>We start by understanding your needs and crafting a design that reflects your brand.</p>
-                    </div>
-                    <div class="step">
-                        <h3>2. Development & Launch</h3>
-                        <p>We build your website with clean code and deploy it on our secure hosting.</p>
-                    </div>
-                    <div class="step">
-                        <h3>3. Ongoing Support</h3>
-                        <p>We provide continuous, hands-free maintenance and updates via email.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="pricing">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Find a Plan That's Right For You</h2>
-                    <p>Simple, transparent pricing for businesses of all sizes.</p>
-                </div>
-                <div class="pricing-grid">
-                    <div class="pricing-card">
-                        <h3>Basic</h3>
-                        <p class="price"><span>$499</span>/one-time</p>
-                        <ul class="feature-list">
-                            <li>Single Page Website</li>
-                            <li>Responsive Design</li>
-                            <li>Basic SEO Setup</li>
-                            <li>1 Month Maintenance</li>
-                        </ul>
-                        <a href="#" id="chooseBasic" class="button button-secondary">Choose Basic</a>
-                    </div>
-                    <div class="pricing-card highlighted">
-                        <span class="highlight-tag">Most Popular</span>
-                        <h3>Pro</h3>
-                        <p class="price"><span>$999</span>/one-time</p>
-                        <ul class="feature-list">
-                            <li>Up to 5 Pages</li>
-                            <li>Custom Design & Features</li>
-                            <li>Advanced SEO</li>
-                            <li>3 Months Maintenance</li>
-                            <li>Priority Support</li>
-                        </ul>
-                        <a href="#" id="choosePro" class="button button-primary">Choose Pro</a>
-                    </div>
-                    <div class="pricing-card">
-                        <h3>Enterprise</h3>
-                        <p class="price"><span>Let's Talk</span></p>
-                        <ul class="feature-list">
-                            <li>Unlimited Pages</li>
-                            <li>Full-stack Applications</li>
-                            <li>Dedicated Support</li>
-                            <li>Ongoing Partnership</li>
-                        </ul>
-                        <a href="#" id="contactSales" class="button button-secondary">Contact Sales</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="demo">
-            <div class="container feature-section">
-                <div class="feature-text">
-                    <h2>See It In Action</h2>
-                    <p>This is a placeholder for an interactive component, like a live chat demo or a project cost calculator, to engage users directly on the site.</p>
-                     <a href="#" class="button button-secondary">View Demo</a>
-                </div>
-                <div class="feature-image">
-                    <div class="demo-box">
-                        <p>Interactive Demo UI Placeholder</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="integrations">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Works With Your Favorite Tools</h2>
-                </div>
-                <div class="logos">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Tool-1" alt="Placeholder Logo 1">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Tool-2" alt="Placeholder Logo 2">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Tool-3" alt="Placeholder Logo 3">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Tool-4" alt="Placeholder Logo 4">
-                    <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Tool-5" alt="Placeholder Logo 5">
-                </div>
-            </div>
-        </section>
-
-        <section id="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Hear What Our Clients Have to Say</h2>
-                </div>
-                <div class="testimonial-grid">
-                    <div class="testimonial-card">
-                        <p>"This is a placeholder testimonial. The service was fantastic and the result exceeded my expectations. Highly recommended!"</p>
-                        <div class="author">
-                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=100&auto=format&fit=crop&facepad=2&fit=facearea" alt="Author 1">
-                            <div>
-                                <h4>Jane Doe</h4>
-                                <span>CEO, ExampleCorp</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <p>"A second placeholder testimonial. Working with them was a breeze and I would highly recommend their services to anyone."</p>
-                        <div class="author">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop&facepad=2&fit=facearea" alt="Author 2">
-                            <div>
-                                <h4>John Smith</h4>
-                                <span>Founder, AnotherCo</span>
-                            </div>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <!-- Hero Section -->
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <div id="hero" style="text-align: center; padding: 40px 0;">
+                            <h1>Simple, Fast, Professional Websites.</h1>
+                            <p>We build high-performance static websites for small and medium-sized businesses that are easy to maintain and a joy to use.</p>
+                            <a href="contact.html" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">Start Your Project</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="contact">
-            <div class="container">
-                <h2>Ready to Elevate Your Web Presence?</h2>
-                <p>Let's build something great together. Get in touch to start your project.</p>
-                <a href="mailto:hello@statisch.dev" class="button button-primary">hello@statisch.dev</a>
-            </div>
-        </section>
-    </main>
+                <!-- Social Proof Section -->
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <section id="social-proof" style="text-align: center;">
+                            <p>TRUSTED BY TEAMS WORLDWIDE</p>
+                            <div class="logos">
+                                <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 1">
+                                <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 2">
+                                <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 3">
+                                <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 4">
+                                <img src="https://placehold.co/150x50/f9fafb/6b7280?text=Logoipsum" alt="Placeholder Logo 5">
+                            </div>
+                        </section>
+                    </div>
+                </div>
 
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="index.html" class="logo">Statisch</a>
-                    <p>High-performance static websites.</p>
+                <!-- Services Summary -->
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+                        <h2>Our Core Services</h2>
+                        <p>We provide everything you need for a successful web presence.</p>
+                        <a href="services.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Learn More About Our Services</a>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Navigate</h3>
-                    <ul>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="why-us.html">Why Us</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="process.html">Process</a></li>
-                    </ul>
+
+                <!-- Why Us Summary -->
+                <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+                        <h2>Why Choose Statisch?</h2>
+                        <p>We focus on one thing and do it perfectly: creating beautiful, high-performance static websites.</p>
+                        <a href="why-us.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Find Out Why</a>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="contact.html">Email Us</a></li>
-                    </ul>
+
+                <!-- Process Summary -->
+                 <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+                        <h2>Our Simple 3-Step Process</h2>
+                        <p>We start by understanding your needs, then we build and launch your site, providing ongoing support.</p>
+                        <a href="process.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">See Our Process</a>
+                    </div>
                 </div>
-                <div class="footer-col">
-                    <h3>Social</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
+
+                <!-- Pricing Section -->
+                <section id="pricing">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+                            <h2>Find a Plan That's Right For You</h2>
+                            <p>Simple, transparent pricing for businesses of all sizes.</p>
+                        </div>
+                    </div>
+                    <div class="mdl-grid">
+                        <!-- Basic Plan -->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Basic</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <p class="price">$499/one-time</p>
+                                    <ul>
+                                        <li>Single Page Website</li>
+                                        <li>Responsive Design</li>
+                                        <li>Basic SEO Setup</li>
+                                        <li>1 Month Maintenance</li>
+                                    </ul>
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="#" id="chooseBasic" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Choose Basic</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pro Plan -->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Pro</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <p class="price">$999/one-time</p>
+                                    <ul>
+                                        <li>Up to 5 Pages</li>
+                                        <li>Custom Design & Features</li>
+                                        <li>Advanced SEO</li>
+                                        <li>3 Months Maintenance</li>
+                                        <li>Priority Support</li>
+                                    </ul>
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                     <a href="#" id="choosePro" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Choose Pro</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Enterprise Plan -->
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card mdl-shadow--2dp">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Enterprise</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    <p class="price">Let's Talk</p>
+                                    <ul>
+                                        <li>Unlimited Pages</li>
+                                        <li>Full-stack Applications</li>
+                                        <li>Dedicated Support</li>
+                                        <li>Ongoing Partnership</li>
+                                    </ul>
+                                </div>
+                                <div class="mdl-card__actions mdl-card--border">
+                                    <a href="#" id="contactSales" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Contact Sales</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Testimonials Summary -->
+                 <div class="mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+                        <h2>Hear What Our Clients Have to Say</h2>
+                         <a href="testimonials.html" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Read Testimonials</a>
+                    </div>
                 </div>
+
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Statisch. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        </main>
+    </div>
 
     <!-- Modals -->
     <div id="basicModal" class="modal">

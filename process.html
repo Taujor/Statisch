@@ -4,90 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statisch | Process</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Statisch</a>
-            <nav>
-                <ul>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="why-us.html">Why Us</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="process.html">Process</a></li>
-                </ul>
+    <!-- MDL Layout -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Statisch</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="services.html">Services</a>
+                    <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
+                    <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
+                    <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
+                    <a class="mdl-navigation__link" href="process.html">Process</a>
+                    <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Statisch</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="services.html">Services</a>
+                <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
+                <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
+                <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
+                <a class="mdl-navigation__link" href="process.html">Process</a>
+                <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
             </nav>
-            <a href="contact.html" class="button button-primary">Get In Touch</a>
         </div>
-    </header>
-
-    <main>
-        <section id="process">
-             <div class="container">
-                <div class="section-header">
-                    <h2>Our Simple 3-Step Process</h2>
-                </div>
-                <div class="process-steps">
-                     <div class="step">
-                        <h3>1. Consultation & Design</h3>
-                        <p>We start by understanding your needs and crafting a design that reflects your brand.</p>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <section id="process">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+                            <h2>Our Simple 3-Step Process</h2>
+                        </div>
                     </div>
-                    <div class="step">
-                        <h3>2. Development & Launch</h3>
-                        <p>We build your website with clean code and deploy it on our secure hosting.</p>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">1. Consultation & Design</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    We start by understanding your needs and crafting a design that reflects your brand.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">2. Development & Launch</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    We build your website with clean code and deploy it on our secure hosting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--4-col">
+                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">3. Ongoing Support</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    We provide continuous, hands-free maintenance and updates via email.
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="step">
-                        <h3>3. Ongoing Support</h3>
-                        <p>We provide continuous, hands-free maintenance and updates via email.</p>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="index.html" class="logo">Statisch</a>
-                    <p>High-performance static websites.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Navigate</h3>
-                    <ul>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="why-us.html">Why Us</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="process.html">Process</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="contact.html">Email Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Social</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Statisch. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+        </main>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

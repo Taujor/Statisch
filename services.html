@@ -4,95 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statisch | Services</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <link rel="stylesheet" href="main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">Statisch</a>
-            <nav>
-                <ul>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="why-us.html">Why Us</a></li>
-                    <li><a href="pricing.html">Pricing</a></li>
-                    <li><a href="testimonials.html">Testimonials</a></li>
-                    <li><a href="process.html">Process</a></li>
-                </ul>
+    <!-- MDL Layout -->
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header">
+            <div class="mdl-layout__header-row">
+                <!-- Title -->
+                <span class="mdl-layout-title">Statisch</span>
+                <!-- Add spacer, to align navigation to the right -->
+                <div class="mdl-layout-spacer"></div>
+                <!-- Navigation. We hide it in small screens. -->
+                <nav class="mdl-navigation mdl-layout--large-screen-only">
+                    <a class="mdl-navigation__link" href="services.html">Services</a>
+                    <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
+                    <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
+                    <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
+                    <a class="mdl-navigation__link" href="process.html">Process</a>
+                    <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Statisch</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="index.html">Home</a>
+                <a class="mdl-navigation__link" href="services.html">Services</a>
+                <a class="mdl-navigation__link" href="why-us.html">Why Us</a>
+                <a class="mdl-navigation__link" href="pricing.html">Pricing</a>
+                <a class="mdl-navigation__link" href="testimonials.html">Testimonials</a>
+                <a class="mdl-navigation__link" href="process.html">Process</a>
+                <a class="mdl-navigation__link" href="contact.html">Get In Touch</a>
             </nav>
-            <a href="contact.html" class="button button-primary">Get In Touch</a>
         </div>
-    </header>
-
-    <main>
-        <section id="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Our Core Services</h2>
-                    <p>We provide everything you need for a successful web presence.</p>
-                </div>
-                <div class="service-grid">
-                    <div class="card">
-                        <h3>Bespoke Web Design</h3>
-                        <p>A unique, modern design tailored specifically to your brand and business goals.</p>
+        <main class="mdl-layout__content">
+            <div class="page-content">
+                <section id="services">
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--12-col" style="text-align: center;">
+                            <h2>Our Core Services</h2>
+                            <p>We provide everything you need for a successful web presence.</p>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Development</h3>
-                        <p>Clean, efficient, and responsive code that ensures your site is fast and reliable on all devices.</p>
+                    <div class="mdl-grid">
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Bespoke Web Design</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    A unique, modern design tailored specifically to your brand and business goals.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Development</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Clean, efficient, and responsive code that ensures your site is fast and reliable on all devices.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Hosting</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Secure and dependable hosting, so you never have to worry about uptime or performance.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mdl-cell mdl-cell--6-col">
+                            <div class="mdl-card mdl-shadow--2dp" style="width: 100%;">
+                                <div class="mdl-card__title">
+                                    <h2 class="mdl-card__title-text">Hands-Free Maintenance</h2>
+                                </div>
+                                <div class="mdl-card__supporting-text">
+                                    Need a change? Just send us an email. We handle all content updates and edits for you.
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card">
-                        <h3>Hosting</h3>
-                        <p>Secure and dependable hosting, so you never have to worry about uptime or performance.</p>
-                    </div>
-                    <div class="card">
-                        <h3>Hands-Free Maintenance</h3>
-                        <p>Need a change? Just send us an email. We handle all content updates and edits for you.</p>
-                    </div>
-                </div>
+                </section>
             </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <a href="index.html" class="logo">Statisch</a>
-                    <p>High-performance static websites.</p>
-                </div>
-                <div class="footer-col">
-                    <h3>Navigate</h3>
-                    <ul>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="why-us.html">Why Us</a></li>
-                        <li><a href="pricing.html">Pricing</a></li>
-                        <li><a href="testimonials.html">Testimonials</a></li>
-                        <li><a href="process.html">Process</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="contact.html">Email Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h3>Social</h3>
-                    <ul>
-                        <li><a href="#">Twitter</a></li>
-                        <li><a href="#">LinkedIn</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Statisch. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
+        </main>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

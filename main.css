@@ -1,34 +1,46 @@
 /* Custom styles for Statisch MDC Theme */
 
+:root {
+  --mdc-theme-primary: #10B981;
+  --mdc-theme-on-primary: #FFFFFF;
+}
+
+body {
+    background-color: #f9fafb;
+}
+
 .main-content {
-    padding: 24px;
+    padding: 16px;
 }
 
 #hero {
     text-align: center;
-    padding: 64px 24px;
+    padding: 48px 24px;
 }
 
 .mdc-layout-grid {
-    padding: 0;
+    padding: 8px;
+}
+
+.mdc-layout-grid__cell {
+    padding: 8px;
 }
 
 .mdc-card {
     width: 100%;
-    margin-bottom: 16px;
 }
 
 .price {
     font-size: 2rem;
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .author {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 1rem;
+    padding: 16px;
 }
 
 .author img {
